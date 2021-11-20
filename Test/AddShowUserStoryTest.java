@@ -123,7 +123,7 @@ public class AddShowUserStoryTest extends ShowsSystemTest
             Date bad_new_date = new Date(1022,12,20);
             String admin_username = "Sagi Brudni";
             boolean success = bridge.updateDateOfShow(bad_show_name, bad_new_date, admin_username);
-            Assert.assertFalse(success); // The show name doesnt match one of the shows in the system
+            Assert.assertFalse(success); // The show name doesn't match one of the shows in the system
             // and the new date already past.
         }
         catch (Exception e)

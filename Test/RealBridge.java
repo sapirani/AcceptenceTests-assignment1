@@ -15,7 +15,7 @@ public class RealBridge implements IBridge
     }
 
     @Override
-    public int showFound(String description, Date date, String venue)
+    public int getShowIndex(String description, Date date, String venue)
     {
         throw new UnsupportedOperationException();
     }

@@ -5,7 +5,6 @@ import java.util.Date;
 
 public class OrderShowUserStoryTest extends ShowsSystemTest
 {
-
     @Test
     public void searchShowHappy()
     {
@@ -15,8 +14,8 @@ public class OrderShowUserStoryTest extends ShowsSystemTest
             String description = "Love story";
             String venue = "#1";
             Date date = new Date(2022,12,20);
-            int foundShow = bridge.showFound(description, date, venue);
-            Assert.assertTrue(foundShow > 0);
+            int showIndex = bridge.getShowIndex(description, date, venue);
+            Assert.assertTrue(showIndex >= 0);
         }
         catch (Exception e)
         {
@@ -33,8 +32,8 @@ public class OrderShowUserStoryTest extends ShowsSystemTest
             String description = "Love story";
             String venue = "#1";
             Date sad_date = new Date(1022, 12, 10);
-            int foundShow = bridge.showFound(description, sad_date, venue);
-            Assert.assertTrue(foundShow <= 0); // The date of the show doesnt match the existing show
+            int showIndex = bridge.getShowIndex(description, sad_date, venue);
+            Assert.assertTrue(showIndex <= 0); // The date of the show doesnt match the existing show
         }
         catch (Exception e)
         {
@@ -51,8 +50,8 @@ public class OrderShowUserStoryTest extends ShowsSystemTest
             String bad_description = "@#***";
             String bad_venue = "-*-*-++&&";
             Date date = new Date(2022,12,20);
-            int foundShow = bridge.showFound(bad_description, date, bad_venue);
-            Assert.assertTrue(foundShow <= 0); // Illegal description and venue,
+            int showIndex = bridge.getShowIndex(bad_description, date, bad_venue);
+            Assert.assertTrue(showIndex <= 0); // Illegal description and venue,
             // None of the shows in the system match those details.
         }
         catch (Exception e)

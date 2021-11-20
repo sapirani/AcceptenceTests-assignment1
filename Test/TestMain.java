@@ -4,7 +4,7 @@ public class TestMain
     {
         IBridge real_bridge = new RealBridge();
         IBridge proxy_bridge = new ProxyBridge(real_bridge);
-        //ShowsSystemTests tests = new ShowsSystemTests();
+        //ShowsSystemTest tests = new ShowsSystemTest(proxy_bridge);
         //tests.setBridge(proxy_bridge);
     }
 }

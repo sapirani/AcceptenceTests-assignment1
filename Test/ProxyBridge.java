@@ -26,10 +26,10 @@ public class ProxyBridge implements IBridge
     }
 
     @Override
-    public int showFound(String description, Date date, String venue)
+    public int getShowIndex(String description, Date date, String venue)
     {
         if(bridge != null)
-            return bridge.showFound(description, date, venue);
+            return bridge.getShowIndex(description, date, venue);
         return 0;
     }
 
