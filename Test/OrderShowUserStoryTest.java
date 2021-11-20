@@ -130,7 +130,7 @@ public class OrderShowUserStoryTest extends ShowsSystemTest
     }
 
     @Test
-    public void cancleOrderOfChairsToShowHappy()
+    public void cancelOrderOfChairsToShowHappy()
     {
         /** Happy case **/
         try
@@ -152,7 +152,7 @@ public class OrderShowUserStoryTest extends ShowsSystemTest
     }
 
     @Test
-    public void cancleOrderOfChairsToShowSad()
+    public void cancelOrderOfChairsToShowSad()
     {
         /** Sad case **/
         try
@@ -172,7 +172,7 @@ public class OrderShowUserStoryTest extends ShowsSystemTest
     }
 
     @Test
-    public void cancleOrderOfChairsToShowBad()
+    public void cancelOrderOfChairsToShowBad()
     {
         /** Bad case **/
         try
