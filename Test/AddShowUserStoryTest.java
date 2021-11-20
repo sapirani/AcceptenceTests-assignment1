@@ -18,7 +18,7 @@ public class AddShowUserStoryTest extends ShowsSystemTest
             String description = "Love story";
             String venue = "#1";
             Date date = new Date(2022,12,10);
-            int ticket_price = 20;
+            float ticket_price = 20;
             Date last_day_to_purchase = new Date(2022,12,1);
             String admin_username = "Sagi Brudni";
             boolean success = bridge.addShowWithoutTime(show_name,
@@ -42,7 +42,7 @@ public class AddShowUserStoryTest extends ShowsSystemTest
             String description = "Comedy";
             String venue = "#1";
             Date sad_date = new Date(1022,12,10);
-            int ticket_price = 30;
+            float ticket_price = 30;
             Date last_day_to_purchase = new Date(2022,12,1);
             String admin_username = "Sagi Brudni";
             boolean success = bridge.addShowWithoutTime(show_name,
@@ -65,7 +65,7 @@ public class AddShowUserStoryTest extends ShowsSystemTest
             String description = "Musical show";
             String venue = "#2";
             Date date = new Date(2022,11,18);
-            int bad_ticket_price = 30; // TODO: change to special characters
+            float bad_ticket_price = -200; // TODO: change to special characters
             Date last_day_to_purchase = new Date(2022,11,10);
             String admin_username = "Sagi Brudni";
             boolean success = bridge.addShowWithoutTime(show_name,
@@ -108,7 +108,7 @@ public class AddShowUserStoryTest extends ShowsSystemTest
             Date new_date = new Date(2022,12,20);
             String admin_username = "Sagi Brudni";
             boolean success = bridge.updateDateOfShow(sad_show_name, new_date, admin_username);
-            Assert.assertFalse(success); // The show name doesnt match one of the shows in the system
+            Assert.assertFalse(success); // The show name and date doesn't match one of the shows in the system
         }
         catch (Exception e)
         {

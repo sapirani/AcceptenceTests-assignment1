@@ -33,7 +33,7 @@ public class OrderShowUserStoryTest extends ShowsSystemTest
             String venue = "#5";
             Date sad_date = new Date(1022, 12, 10);
             int showIndex = bridge.getShowIndex(description, sad_date, venue);
-            Assert.assertTrue(showIndex < 0); // The date of the show doesnt match the existing show
+            Assert.assertTrue(showIndex < 0); // The date of the show doesn't match the existing show
         }
         catch (Exception e)
         {
@@ -97,7 +97,7 @@ public class OrderShowUserStoryTest extends ShowsSystemTest
             int[] chairs_to_order = {9,10};
 
             boolean success = bridge.orderChairToShow(usernameOfOrder, sad_phone_number, show_name, show_date, chairs_to_order);
-            Assert.assertTrue(success); // The order succeded but yossi entered wrong phone number,
+            Assert.assertTrue(success); // The order succeeded but yossi entered wrong phone number,
                                         // so he would'nt receive the success message and to pay on his tickets.
             bridge.cancelOrderOfChairsToShow(usernameOfOrder, sad_phone_number, show_name, show_date); // cancel changes
         }
@@ -121,7 +121,7 @@ public class OrderShowUserStoryTest extends ShowsSystemTest
             int[] bad_chairs_to_order = {5,6};
 
             boolean success = bridge.orderChairToShow(usernameOfOrder, bad_phone_number, show_name, show_date, bad_chairs_to_order);
-            Assert.assertFalse(success); // The phone number is illegal, and the sits are alredy taken.
+            Assert.assertFalse(success); // The phone number is illegal, and the sits are already taken.
         }
         catch (Exception e)
         {
@@ -184,7 +184,7 @@ public class OrderShowUserStoryTest extends ShowsSystemTest
 
             boolean success = bridge.cancelOrderOfChairsToShow(usernameOfOrder, phone_number, bad_show_name, bad_show_date);
             Assert.assertFalse(success); // The order of chairs was to a different show in other date,
-                                        // phone number is illigal
+                                        // phone number is illegal
         }
         catch (Exception e)
         {
