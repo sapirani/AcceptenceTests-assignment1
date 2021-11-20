@@ -29,11 +29,9 @@ public class ShowsSystemTest {
     @After
     public void tearDown() throws Exception
     {
-        bridge.cancelOrderOfChairsToShow("Yossi", "0547863125", "First show", new Date(2022, 12, 20));
         bridge.cancelOrderOfChairsToShow("Sapir", "0547863125", "Star show", new Date(2021, 12, 1));
 
         bridge.removeShow("Star show", new Date(2021, 12, 1), "Sagi Brudni");
-        bridge.removeShow("First show", new Date(2022, 12, 20), "Sagi Brudni");
 
         bridge.deleteUserFromSystem("Yossi", "yos");
         bridge.deleteUserFromSystem("Sapir", "abc1");
