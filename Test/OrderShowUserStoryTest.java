@@ -1,10 +1,18 @@
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Date;
 
 public class OrderShowUserStoryTest extends ShowsSystemTest
 {
+    @Override
+    @Before
+    public void setUp() throws Exception
+    {
+        super.setUp();
+    }
+
     @Test
     public void searchShowHappy()
     {
