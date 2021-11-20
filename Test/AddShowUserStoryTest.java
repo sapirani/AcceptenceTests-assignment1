@@ -1,11 +1,14 @@
 import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.Date;
 
-public class AddShowUserStoryTests extends ShowsSystemTests
-{
-    // ** Add show ** //
+import static org.junit.Assert.*;
 
+public class AddShowUserStoryTest extends ShowsSystemTest
+{
+
+    @Test
     public void addShowWithoutTimeHappy()
     {
         /** Happy case **/
@@ -28,6 +31,7 @@ public class AddShowUserStoryTests extends ShowsSystemTests
         }
     }
 
+    @Test
     public void addShowWithoutTimeSad()
     {
         /** Sad case **/
@@ -50,6 +54,7 @@ public class AddShowUserStoryTests extends ShowsSystemTests
         }
     }
 
+    @Test
     public void addShowWithoutTimeBad()
     {
         /** Bad case **/
@@ -72,8 +77,7 @@ public class AddShowUserStoryTests extends ShowsSystemTests
         }
     }
 
-    // ** Update show date ** //
-
+    @Test
     public void updateShowDateHappy()
     {
         /** Happy case **/
@@ -91,6 +95,7 @@ public class AddShowUserStoryTests extends ShowsSystemTests
         }
     }
 
+    @Test
     public void updateShowDateSad()
     {
         /** Sad case **/
@@ -108,6 +113,7 @@ public class AddShowUserStoryTests extends ShowsSystemTests
         }
     }
 
+    @Test
     public void updateShowDateBad()
     {
         /** Bad case **/

@@ -1,11 +1,14 @@
 import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.Date;
 
-public class OrderShowUserStoryTests extends ShowsSystemTests
-{
-    // ** Search show ** //
+import static org.junit.Assert.*;
 
+public class OrderShowUserStoryTest extends ShowsSystemTest
+{
+
+    @Test
     public void searchShowHappy()
     {
         /** Happy case **/
@@ -23,6 +26,7 @@ public class OrderShowUserStoryTests extends ShowsSystemTests
         }
     }
 
+    @Test
     public void searchShowSad()
     {
         /** Sad case **/
@@ -40,6 +44,7 @@ public class OrderShowUserStoryTests extends ShowsSystemTests
         }
     }
 
+    @Test
     public void searchShowBad()
     {
         /** Bad case **/
@@ -58,10 +63,11 @@ public class OrderShowUserStoryTests extends ShowsSystemTests
         }
     }
 
-    // ** Ordar chairs to the show ** //
-
+    @Test
     public void orderChairsToShowHappy()
     {
+        /** Happy case **/
+
         try
         {
             String usernameOfOrder = "Sapir";
@@ -79,8 +85,11 @@ public class OrderShowUserStoryTests extends ShowsSystemTests
         }
     }
 
+    @Test
     public void orderChairsToShowSad()
     {
+        /** Sad case **/
+
         try
         {
             String usernameOfOrder = "Yossi";
@@ -99,8 +108,11 @@ public class OrderShowUserStoryTests extends ShowsSystemTests
         }
     }
 
+    @Test
     public void orderChairsToShowBad()
     {
+        /** Bad case **/
+
         try
         {
             String usernameOfOrder = "Sagi Brudni";
@@ -118,8 +130,7 @@ public class OrderShowUserStoryTests extends ShowsSystemTests
         }
     }
 
-    // ** Cancel order of chairs to the show ** //
-
+    @Test
     public void cancleOrderOfChairsToShowHappy()
     {
         /** Happy case **/
@@ -139,6 +150,7 @@ public class OrderShowUserStoryTests extends ShowsSystemTests
         }
     }
 
+    @Test
     public void cancleOrderOfChairsToShowSad()
     {
         /** Sad case **/
@@ -158,6 +170,7 @@ public class OrderShowUserStoryTests extends ShowsSystemTests
         }
     }
 
+    @Test
     public void cancleOrderOfChairsToShowBad()
     {
         /** Bad case **/
