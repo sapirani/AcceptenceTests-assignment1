@@ -50,10 +50,10 @@ public class ProxyBridge implements IBridge
     }
 
     @Override
-    public boolean cancleOrderOfChairsToShow(String usernameOfOrder, String phone_number, String show_name, Date show_date)
+    public boolean cancelOrderOfChairsToShow(String usernameOfOrder, String phone_number, String show_name, Date show_date)
     {
         if(bridge != null)
-            return bridge.cancleOrderOfChairsToShow(usernameOfOrder, phone_number, show_name, show_date);
+            return bridge.cancelOrderOfChairsToShow(usernameOfOrder, phone_number, show_name, show_date);
         return false;
     }
 

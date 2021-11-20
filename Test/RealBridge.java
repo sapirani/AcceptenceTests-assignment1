@@ -33,7 +33,7 @@ public class RealBridge implements IBridge
     }
 
     @Override
-    public boolean cancleOrderOfChairsToShow(String usernameOfOrder, String phone_number, String show_name, Date show_date)
+    public boolean cancelOrderOfChairsToShow(String usernameOfOrder, String phone_number, String show_name, Date show_date)
     {
         throw new UnsupportedOperationException();
     }

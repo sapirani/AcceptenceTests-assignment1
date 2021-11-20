@@ -3,8 +3,6 @@ import org.junit.Test;
 
 import java.util.Date;
 
-import static org.junit.Assert.*;
-
 public class OrderShowUserStoryTest extends ShowsSystemTest
 {
 
@@ -141,7 +139,7 @@ public class OrderShowUserStoryTest extends ShowsSystemTest
             String show_name = "First show";
             Date show_date = new Date(2022,12,20);
 
-            boolean success = bridge.cancleOrderOfChairsToShow(usernameOfOrder, phone_number, show_name, show_date);
+            boolean success = bridge.cancelOrderOfChairsToShow(usernameOfOrder, phone_number, show_name, show_date);
             Assert.assertTrue(success);
         }
         catch (Exception e)
@@ -161,7 +159,7 @@ public class OrderShowUserStoryTest extends ShowsSystemTest
             String show_name = "Star show";
             Date sad_show_date = new Date(2021,1,12);
 
-            boolean success = bridge.cancleOrderOfChairsToShow(usernameOfOrder, phone_number, show_name, sad_show_date);
+            boolean success = bridge.cancelOrderOfChairsToShow(usernameOfOrder, phone_number, show_name, sad_show_date);
             Assert.assertFalse(success); // The order of chairs was to a show in other date
         }
         catch (Exception e)
@@ -181,7 +179,7 @@ public class OrderShowUserStoryTest extends ShowsSystemTest
             String bad_show_name = "Second show";
             Date bad_show_date = new Date(2022,12,10);
 
-            boolean success = bridge.cancleOrderOfChairsToShow(usernameOfOrder, phone_number, bad_show_name, bad_show_date);
+            boolean success = bridge.cancelOrderOfChairsToShow(usernameOfOrder, phone_number, bad_show_name, bad_show_date);
             Assert.assertFalse(success); // The order of chairs was to a different show in other date
         }
         catch (Exception e)

@@ -1,13 +1,15 @@
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
 
 import java.util.Date;
 
-import static org.junit.Assert.*;
-
 public class ShowsSystemTest {
     protected IBridge bridge;
+
+    public ShowsSystemTest()
+    {
+        bridge = new ProxyBridge(null);
+    }
 
     @Before
     public void setUp() throws Exception
@@ -32,8 +34,8 @@ public class ShowsSystemTest {
     @After
     public void tearDown() throws Exception
     {
-        bridge.cancleOrderOfChairsToShow("Yossi", "0547863125", "First show", new Date(2022, 12, 20));
-        bridge.cancleOrderOfChairsToShow("Sapir", "0547863125", "Star show", new Date(2021, 12, 1));
+        bridge.cancelOrderOfChairsToShow("Yossi", "0547863125", "First show", new Date(2022, 12, 20));
+        bridge.cancelOrderOfChairsToShow("Sapir", "0547863125", "Star show", new Date(2021, 12, 1));
 
         bridge.removeShow("Star show", new Date(2021, 12, 1), "Sagi Brudni");
         bridge.removeShow("First show", new Date(2022, 12, 20), "Sagi Brudni");

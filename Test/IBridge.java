@@ -7,7 +7,7 @@ public interface IBridge
     int showFound(String description, Date date, String venue);
     boolean orderChairToShow(String usernameOfOrder, String phone_number, String show_name, Date show_date, int[] chairs_to_order);
     boolean updateDateOfShow(String show_name, Date new_date, String username);
-    boolean cancleOrderOfChairsToShow(String usernameOfOrder, String phone_number, String show_name, Date show_date);
+    boolean cancelOrderOfChairsToShow(String usernameOfOrder, String phone_number, String show_name, Date show_date);
     boolean removeShow(String show_name, Date show_date, String username);
     boolean deleteUserFromSystem(String username, String password);
 }
