@@ -37,6 +37,4 @@ public class ShowsSystemTest {
         bridge.deleteUserFromSystem("Sapir", "abc1");
         bridge.deleteUserFromSystem("Sagi Brudni", "1234");
     }
-
-    // set bridge
 }
