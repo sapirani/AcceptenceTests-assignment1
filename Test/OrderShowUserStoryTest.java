@@ -126,7 +126,7 @@ public class OrderShowUserStoryTest extends ShowsSystemTest
             String bad_phone_number = "$#%&&@$$";
             String show_name = "Star show";
             Date show_date = new Date(2021,12,1);
-            int[] bad_chairs_to_order = {5,6};
+            int[] bad_chairs_to_order = {11,12};
 
             boolean success = bridge.orderChairToShow(usernameOfOrder, bad_phone_number, show_name, show_date, bad_chairs_to_order);
             Assert.assertFalse(success); // The phone number is illegal, and the sits are already taken.

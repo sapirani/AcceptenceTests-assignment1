@@ -29,7 +29,7 @@ public class RealBridge implements IBridge
     }
 
     @Override
-    public boolean updateDateOfShow(String show_name, Date new_date, String username)
+    public boolean updateDateOfShow(String show_name, String venue, Date new_date, String username)
     {
         throw new NotImplementedException();
     }

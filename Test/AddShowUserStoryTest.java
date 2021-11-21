@@ -4,8 +4,6 @@ import org.junit.Test;
 
 import java.util.Date;
 
-import static org.junit.Assert.*;
-
 public class AddShowUserStoryTest extends ShowsSystemTest
 {
     @Override
@@ -72,7 +70,7 @@ public class AddShowUserStoryTest extends ShowsSystemTest
             String description = "Musical show";
             String venue = "#2";
             Date date = new Date(2022,11,18);
-            float bad_ticket_price = -200; // TODO: change to special characters
+            float bad_ticket_price = -200;
             Date last_day_to_purchase = new Date(2022,11,10);
             String admin_username = "Sagi Brudni";
             boolean success = bridge.addShowWithoutTime(show_name,
@@ -92,12 +90,13 @@ public class AddShowUserStoryTest extends ShowsSystemTest
         try
         {
             String show_name = "Star show";
+            String venue = "#5";
             Date new_date = new Date(2022,12,20);
             String admin_username = "Sagi Brudni";
-            boolean success = bridge.updateDateOfShow(show_name, new_date, admin_username);
+            boolean success = bridge.updateDateOfShow(show_name, venue, new_date, admin_username);
             Assert.assertTrue(success);
             Date old_date = new Date(2021,12,1);
-            bridge.updateDateOfShow(show_name, old_date, admin_username); // cancel changes
+            bridge.updateDateOfShow(show_name, venue, old_date, admin_username); // cancel changes
         }
         catch (Exception e)
         {
@@ -112,10 +111,11 @@ public class AddShowUserStoryTest extends ShowsSystemTest
         try
         {
             String sad_show_name = "Start show";
+            String venue = "#5";
             Date new_date = new Date(2022,12,20);
             String admin_username = "Sagi Brudni";
-            boolean success = bridge.updateDateOfShow(sad_show_name, new_date, admin_username);
-            Assert.assertFalse(success); // The show name and date doesn't match one of the shows in the system
+            boolean success = bridge.updateDateOfShow(sad_show_name, venue, new_date, admin_username);
+            Assert.assertFalse(success); // The show name doesn't match one of the shows in the system
         }
         catch (Exception e)
         {
@@ -130,9 +130,10 @@ public class AddShowUserStoryTest extends ShowsSystemTest
         try
         {
             String bad_show_name = "$%^Star @#show*&";
+            String venue = "#5";
             Date bad_new_date = new Date(1022,12,20);
             String admin_username = "Sagi Brudni";
-            boolean success = bridge.updateDateOfShow(bad_show_name, bad_new_date, admin_username);
+            boolean success = bridge.updateDateOfShow(bad_show_name, venue, bad_new_date, admin_username);
             Assert.assertFalse(success); // The show name doesn't match one of the shows in the system
                                         // and the new date already past.
         }

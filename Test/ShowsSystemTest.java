@@ -9,7 +9,7 @@ public class ShowsSystemTest {
     @Before
     public void setUp() throws Exception
     {
-        bridge = BridgeProvider.getBridge(); // just for now
+        bridge = BridgeProvider.getBridge();
         // Add users
         bridge.addUserToSystem("Sagi Brudni", "1234", "0546783125", true);
         bridge.addUserToSystem("Sapir", "abc1", "0547863125", false);

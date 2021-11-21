@@ -42,11 +42,11 @@ public class ProxyBridge implements IBridge
     }
 
     @Override
-    public boolean updateDateOfShow(String show_name, Date new_date, String username)
+    public boolean updateDateOfShow(String show_name, String venue, Date new_date, String username)
     {
         if(bridge == null)
             return false;
-        return bridge.updateDateOfShow(show_name, new_date, username);
+        return bridge.updateDateOfShow(show_name, venue, new_date, username);
     }
 
     @Override
